@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+<title>우리들의 보드게임 세상 보드밍</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/head.css">
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+/*  // 1초에 한번씩 함수 수행 
+    setInterval(moveImage, 4000);// cf) setTimeout(fn,시간); */
+    // quickmenu의 이미지의 top 위치가 얼마인지 담기
+    var top = parseInt($("#quickmenu img").css("top"));
+    console.log(top);
+    
+    // 상단 메인 메뉴 관리
+    $("li.mainmenu ul").hide(); // 하위메뉴 숨기기
+    $("li.mainmenu").hover(function(){
+        $("ul",this).slideDown(300);
+    }, function(){
+        $("ul",this).slideUp(300);
+    });
+});
+// 상단 메인 배너 함수
+/* function moveImage() {
+    $("#box2").animate(
+        {"left" : "-=1200"}, 1200, 
+        function() {
+            var left = parseInt($("#box2").css("left"));
+            // box2의 left 좌표가 -805보다 작아진다면, 0px로 돌아온다.
+            if (left < -2401) {
+                $("#box2").css("left", "0px");
+        }
+    });
+} */
+</script>
+</head>
+<body>
+<div id="main-head">
+    <!-- 상단 헤더 -->
+    <div id="head">
+            <a href="header2.html">
+                <img id="logo" src="image/logo.png">
+            </a>
+        <div id="search">
+            <input class="form-control search" placeholder="검색창"/>
+        </div>
+        <div id="login-main">
+            <div id="login-btn">
+                <a href="header2.html">로그인</a>
+                <a href="header2.html">회원가입</a>
+                <a href="header2.html">고객센터</a>
+            <div class="login-icon">
+                <a href="header2.html">
+                    <img src="image/love.png">
+                </a>
+            </div>
+            <div class="login-icon">
+                <a href="header2.html">
+                    <img src="image/cart.png">
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- 상단 헤더 end -->
+    
+    <!-- 헤더 메인 메뉴 -->
+    <ul id="drowdownmenu">
+        <li class="mainmenu">
+            <a href="#">게임캐쉬</a>
+            <ul>
+                <li><a href="#">넥슨카드</a></li>
+                <li><a href="#">틴캐시</a></li>
+                <li><a href="#">와우캐시</a></li>
+            </ul>
+        </li> 
+        <li class="mainmenu">
+            <a href="#">상품권</a>
+            <ul>
+                <li><a href="#">문화상품권</a></li>
+                <li><a href="#">구글기프트카드</a></li>
+                <li><a href="#">해피머니</a></li>
+            </ul>
+        </li>     
+        <li class="mainmenu">
+            <a href="#">이벤트</a>
+            <ul>
+                <li><a href="#">문화상품권</a></li>
+                <li><a href="#">구글기프트카드</a></li>
+                <li><a href="#">해피머니</a></li>
+            </ul>
+        </li>     
+        <li class="mainmenu">
+            <a href="#">고객문의</a>
+            <ul>
+                <li><a href="#">문화상품권</a></li>
+                <li><a href="#">구글기프트카드</a></li>
+                <li><a href="#">해피머니</a></li>
+            </ul>
+        </li>     
+        <li class="mainmenu">
+            <a href="#">게시판</a>
+            <ul>
+                <li><a href="#">문화상품권</a></li>
+                <li><a href="#">구글기프트카드</a></li>
+                <li><a href="#">해피머니</a></li>
+            </ul>
+        </li>     
+        <li class="mainmenu">
+            <a href="#">공지사항</a>
+            <ul>
+                <li><a href="#">문화상품권</a></li>
+                <li><a href="#">구글기프트카드</a></li>
+                <li><a href="#">해피머니</a></li>
+            </ul>
+        </li>     
+    </ul>
+</div>
+<!-- 헤더 메인 메뉴 end -->
+
+	<!-- 상단 슬라이딩 배너 -->
+	<div id="demo" class="carousel slide" data-bs-ride="carousel">
+		<!-- Indicators/dots -->
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="0"
+				class="active"></button>
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+		</div>
+		<!-- The slideshow/carousel -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="image/product_banner1.jpg" alt="Los Angeles"
+					class="d-block w-100">
+			</div>
+			<div class="carousel-item">
+				<img src="image/product_banner2.jpg" alt="Chicago"
+					class="d-block w-100">
+			</div>
+			<div class="carousel-item">
+				<img src="image/product_banner3.jpg" alt="New York"
+					class="d-block w-100">
+			</div>
+			<div class="carousel-item">
+				<img src="image/product_banner4.jpg" alt="New York"
+					class="d-block w-100">
+			</div>
+		</div>
+
+		<!-- Left and right controls/icons -->
+		<button class="carousel-control-prev" type="button"
+			data-bs-target="#demo" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</button>
+		<button class="carousel-control-next" type="button"
+			data-bs-target="#demo" data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</button>
+
+	</div>
+	<!-- 상단 슬라이딩 배너 end -->
+	
+	
+	<!-- 배너 아래 카테고리 아이콘 -->
+    <section class="category-icon">
+        <ul>
+            <li>
+                <a href=header2.html">
+                    <div class="a-1">
+                        <img src="image/003.png" alt="" class="a1-a">
+                        <img src="image/004.png" alt="" class="a1-b">
+                    </div>
+                    <p>베스트</p>
+                </a>
+            </li>
+            <li>
+                <a href=header2.html">
+                    <div class="a-1">
+                        <img src="image/001.png" alt="" class="a1-a">
+                        <img src="image/002.png" alt="" class="a1-b">
+                    </div>
+                    <p>가족게임</p>
+                </a>
+            </li>
+            <li>
+                <a href=header2.html">
+                    <div class="a-1">
+                        <img src="image/005.png" alt="" class="a1-a">
+                        <img src="image/006.png" alt="" class="a1-b">
+                    </div>
+                    <p>어린이게임</p>
+                </a>
+            </li>
+            <li>
+                <a href=header2.html">
+                    <div class="a-1">
+                        <img src="image/007.png" alt="" class="a1-a">
+                        <img src="image/008.png" alt="" class="a1-b">
+                    </div>
+                    <p>전략게임</p>
+                </a>
+            </li>
+            <li>
+                <a href=header2.html">
+                    <div class="a-1">
+                        <img src="image/009.png" alt="" class="a1-a">
+                        <img src="image/010.png" alt="" class="a1-b">
+                    </div>
+                    <p>추상게임</p>
+                </a>
+            </li>
+            <li>
+                <a href=header2.html">
+                    <div class="a-1">
+                        <img src="image/011.png" alt="" class="a1-a">
+                        <img src="image/012.png" alt="" class="a1-b">
+                    </div>
+                    <p>워게임</p>
+                </a>
+            </li>
+            <li>
+                <a href=header2.html">
+                    <div class="a-1">
+                        <img src="image/013.png" alt="" class="a1-a">
+                        <img src="image/014.png" alt="" class="a1-b">
+                    </div>
+                    <p>파티게임</p>
+                </a>
+            </li>
+            <li>
+                <a href=header2.html">
+                    <div class="a-1">
+                        <img src="image/015.png" alt="" class="a1-a">
+                        <img src="image/016.png" alt="" class="a1-b">
+                    </div>
+                    <p>컬렉터블게임</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- 상단 배너 아래 카테고리 아이콘 선일 작업 end -->
+    
+<!-- main 화면 찬종이형 작업 end -->
+<div class="mainbox">
+    <div id="center">
+    </div>
+    <div class="maincontent">
+        <div class="contenttitle">베스트 게임
+            <a href="https://www.naver.com"><img class="more1" src="image/more1.PNG" /></a>
+        </div>
+        <div>
+            <div class="img-container1">
+                <img src="image/splendor2.png" class="img-in-container" style="width: 200px; height: 225px;"/>
+            </div>
+            <div class="img-container1">
+                <img src="image/themind2.png" class="img-in-container" style="width: 200px; height: 225px;"/>
+            </div>
+            <div class="img-container1">
+                <img src="image/ggochi2.png" class="img-in-container" style="width: 200px; height: 225px;"/>
+            </div>
+            <div class="img-container1">
+                <img src="image/terraforming2.png" class="img-in-container" style="width: 200px; height: 225px;"/>
+            </div>
+            <div class="img-container1">
+                <img src="image/gloomhaven2.png" class="img-in-container" style="width: 200px; height: 225px;"/>
+            </div>
+        </div>
+    </div>
+    <div class="maincontent">
+        <div class="contenttitle">추천 게임
+            <a href="https://www.naver.com"><img class="more2" src="image/more2.PNG" /></a>
+            <span class="more2text">더보기</span>
+        </div>
+        <div>
+			    <div class="img-container themindcolor1">
+			        <img src="image/splendor.png" class="img-in-container"/>
+			    </div>
+			    <div class="img-container themindcolor2">
+			        <img src="image/themind.png" class="img-in-container"/>
+			    </div>
+			    <div class="img-container themindcolor3">
+			        <img src="image/ggochi.jpg" class="img-in-container"/>
+			    </div>
+			    <div class="img-container themindcolor4">
+			        <img src="image/terraforming.jpg" class="img-in-container"/>
+			    </div>
+			    <div class="img-container themindcolor5">
+			        <img src="image/gloomhaven.jpg" class="img-in-container"/>
+			    </div>
+			</div>
+    </div>
+    <div class="maincontent">
+        <div class="contenttitle">즐거운 게임
+        </div>
+	        <div>
+			    <div class="img-container3 themindcolor1">
+			        <img src="image/splendor.png" class="img-in-container"/>
+			    </div>
+			    <div class="img-container3 themindcolor2">
+			        <img src="image/themind.png" class="img-in-container"/>
+			    </div>
+			    <div class="img-container3 themindcolor3">
+			        <img src="image/ggochi.jpg" class="img-in-container"/>
+			    </div>
+			    <div class="img-container3 themindcolor4">
+			        <img src="image/terraforming.jpg" class="img-in-container"/>
+			    </div>
+			    <div class="img-container3 themindcolor5">
+			        <img src="image/gloomhaven.jpg" class="img-in-container"/>
+			    </div>
+			</div>
+        <div>
+            <a href="https://www.naver.com"><img class="more3" src="image/more3.PNG" /></a>
+            <span class="more2text">더보기</span>
+        </div>
+    </div>
+    <!-- main 화면 찬종이형 작업 end -->
+    
+    
+        <!-- footer start -->
+    <div id="footer">
+        <img src="image/naverfooter.png" />
+    </div>
+    <!-- footer end -->
+</div>
+</body>
+</html>

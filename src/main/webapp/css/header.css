@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+	font-family: "Pretendard-Regular";
+	margin: 0px;
+	padding: 0px;
+}
+
+/* header css !! */
+
+/* 헤드라인 */
+#head #logo {
+	width: 200px;
+	
+	position: absolute;
+	left: 80px;
+	top : 10px;
+}
+
+#head {
+/* 	display: grid;
+	grid-template-columns: 5fr 5fr 3.5fr; */
+	height: 90px;
+	background-color: white;
+}
+
+#search {
+	position: absolute;
+	top : 25px;
+	left : 35%;
+}
+
+.search {
+	background: #f7feff;
+	border-radius: 10px;
+	border-color: #B8E9FF;
+	border-width: 2px;
+	
+	font-weight: bold;
+	padding-left: 25px;
+	
+	height: 45px;
+	min-width: 330px;
+}
+
+#login-main {
+	position: absolute;
+	top : 35px;
+	right : 50px;
+}
+
+#login-btn a {
+	text-decoration: none;
+	color: black;
+	padding-right: 30px;
+	font-size: max(1vw);
+	
+	display: inline;
+}
+
+#login-btn a:hover {
+	color: #B8E9FF;
+}
+
+.login-icon img {
+	width: 20px;
+}
+
+.login-icon {
+	display: inline-block;
+}
+
+
+#main-head {
+	position: sticky;
+	
+	top: 0px;
+	height: auto;
+	
+	z-index: 2;
+}
+
+/* 상단 메뉴바 */
+#drowdownmenu {
+	width: 100%;
+	
+	border-top : 0.1px solid #E9E9E9;
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	position: relative; /* 부모 요소의 위치를 기준으로 자식 요소 위치 설정 */
+}
+
+li.mainmenu {
+	float: left;
+	list-style-type: none;
+	
+	position: relative; /* 부모 요소의 위치를 기준으로 자식 요소 위치 설정 */
+	left: 0px;
+	width: 100%;
+}
+
+li.mainmenu ul {
+	margin: 0px;
+	list-style-type: none;
+	padding: 0px;
+	position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+	width: 100%;
+}
+
+.mainmenu a {
+	background-color: white;
+	display: block;
+	
+	color: #383838;
+	text-decoration: none;
+	text-align: center;
+	font-size: max(1.3vw);
+	font-weight: bold;
+	
+	padding: 10px;
+	border-bottom: 1px solid #ffffff;
+	width: 100%;
+	
+	box-sizing: border-box; 
+}
+
+ul#drowdownmenu li a:hover {
+	background-color: white;
+	color: #B8E9FF;
+}
+
+/* 상단메인배너 end */
+
+/* header css !! end */
+
+.mainbox {
+    width: 1200px;
+    height: 5000px;
+    margin: auto;
+}
+.maincontent {
+    text-align: center;
+    margin: 50px auto;
+}
+.contenttitle {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px; /* 예제 높이에 맞춤 */
+    
+}
+.gameimg img {
+    max-width: 200px;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+    transition: all 0.2s linear;
+}
+.maincontent img:hover{
+    transform: scale(1.05);
+}
+.btn btn-outline-info {
+    width: 25px;
+    height: 25px; 
+    vertical-align: middle; 
+    margin: 0; 
+}
+#center {
+    text-align: center;
+    padding: 20px;
+}
+#center-sub {
+    margin: 20px;
+}
+.more2 {
+    width: 25px;
+    height: 25px; 
+    vertical-align: middle;
+    float:right;
+}
+.more2:hover{
+    transform: scale(3);
+}
+.more2text{
+    font-size: 20px;
+    margin-right: auto;
+    float:right;
+}
+.more3 {
+    width: 25px;
+    height: 25px; 
+    vertical-align: middle;
+    float:right;
+}
+.more3:hover{
+    transform: scale(1.5);
+}
+#footer {
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+}
+#footer img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
