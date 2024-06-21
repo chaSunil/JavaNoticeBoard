@@ -18,6 +18,15 @@ public class VisitVo {
 		this.ip = ip;
 	}
 	
+	public VisitVo(int idx, String name, String content, String pwd, String ip) {
+		super();
+		this.idx = idx;
+		this.name = name;
+		this.content = content;
+		this.pwd = pwd;
+		this.ip = ip;
+	}
+
 	public VisitVo() {
 		// TODO Auto-generated constructor stub
 	}

@@ -181,12 +181,14 @@ ul#drowdownmenu li a:hover {
     margin: 10px;
     overflow: hidden;
     height: 225px;
+    
 }
 
 .img-container1 img {
     max-width: 200px;
     height: auto;
     transition: all 0.2s linear;
+    object-fit: cover; 
 }
 .img-container, .img-container3 {
     display: inline-block;

@@ -47,6 +47,14 @@ insert into visit values(seq_visit_idx.nextVal,
 						sysdate
 						);
 						
+insert into visit values(seq_visit_idx.nextVal,
+						'김철수',
+						'我叫金哲洙,住在首尔,今年三十多岁。我在市场营销部门工作。平时喜欢锻炼身体、阅读和旅行。周末会和家人在一起放松。我的梦想是有朝一日开设自己的小咖啡厅,与人们交流,度过美好的时光。我会继续努力,实现这个梦想。谢谢。',
+						'gdsSAFJ13omdg',
+						'192.168.219.119',
+						sysdate
+						);
+						
 -- JDBC용 insert문
 
 insert into visit values(seq_visit_idx.nextVal,?,?,?,?,sysdate);
@@ -59,6 +67,15 @@ select rownum as no, v.*
 from (select * from visit order by idx desc) v;
 
 select * from visit_view where idx = 21;
+
+-- 수정
+
+update visit set name = '일길동',
+				 content = '내가 일등이다',
+				 pwd = '1234',
+				 ip = '192.168.0.107',
+				 regdate = sysdate
+where idx = 26;
 
 						
 -- idx 내림차순 (최신글 맨 꼭대기에 올리겠다)

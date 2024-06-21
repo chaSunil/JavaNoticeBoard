@@ -86,6 +86,10 @@ th {
 </head>
 <body>
 	<form>
+		<!-- idx 값 넘겨주기(수정해야할 데이터 지정) -->
+		<!-- vo에 대한 정보가 넘어왔기에 vo.idx / param.no 가능 -->
+		<input type="hidden" name="idx" value="${ requestScope.vo.idx }">
+		<input type="hidden" name="no" value="${ param.no }">		
 		<div id="box">
 			<h1 id="title">나의 글을 수정합니다.</h1>
 			<!-- Ctrl + Shift + F -->

@@ -245,4 +245,52 @@ public class VisitDao {
 		return vo;
 	}// end:selectOne()
 	
+	public int update(VisitVo vo) {
+		// TODO Auto-generated method stub
+
+		int res = 0;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		String sql = "update visit set name =?, content =?, pwd =?, ip =?, regdate = sysdate where idx=? ";
+
+		try {
+			// 1. Connection 얻어오기
+			conn = DBService.getInstance().getConnection();
+
+			// 2. PreparedStatement
+			pstmt = conn.prepareStatement(sql);
+
+			// 3. pstmt parameter index 채우기
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getContent());
+			pstmt.setString(3, vo.getPwd());
+			pstmt.setString(4, vo.getIp());
+			pstmt.setInt(5, vo.getIdx());
+
+			// 4. DB update
+			res = pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			// 예외 처리에서 무조건 실행되는 부분
+			// 마무리 작업(열린역순으로 닫기)
+			// 한 번에 잡아서 try catch 하기 : alt + shift + s
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		return res;
+
+	}// end:update()
+	
 }
