@@ -3,6 +3,7 @@ package db.vo;
 public class VisitVo {
 
 	int idx;
+	int no;
 	String name;
 	String title;
 	String content;
@@ -10,6 +11,36 @@ public class VisitVo {
 	String ip;
 	String regdate;
 	
+	public VisitVo() {
+	}
+	
+	public VisitVo(int idx, String name, String title, String content, String pwd, String ip) {
+		super();
+		this.idx = idx;
+		this.name = name;
+		this.title = title;
+		this.content = content;
+		this.pwd = pwd;
+		this.ip = ip;
+	}
+
+	public VisitVo(String name, String title, String content, String pwd, String ip) {
+		super();
+		this.name = name;
+		this.title = title;
+		this.content = content;
+		this.pwd = pwd;
+		this.ip = ip;
+	}
+	
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
 	public int getIdx() {
 		return idx;
 	}

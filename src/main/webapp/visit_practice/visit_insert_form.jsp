@@ -53,6 +53,7 @@ th {
 	function send(f) {
 		
 		let name = f.name.value.trim();
+		let title = f.title.value.trim();
 		let content = f.content.value.trim();
 		let pwd = f.pwd.value.trim();
 		
@@ -60,6 +61,13 @@ th {
 			alert("작성자명을 입력하세요!")
 			f.name.value = "";
 			f.name.focus();
+			return;
+		}
+		
+		if(title=='') {
+			alert("제목을 입력하세요!")
+			f.title.value = "";
+			f.title.focus();
 			return;
 		}
 		
@@ -96,8 +104,12 @@ th {
 							<td><input class="form-control" name="name" required="required" autofocus></td>
 						</tr>
 						<tr>
+							<th>제목</th>
+							<td><input class="form-control" name="title" required="required" autofocus></td>
+						</tr>
+						<tr>
 							<th>내용</th>
-							<td><textarea class="form-control" rows="5" name="name" required="required"></textarea></td>
+							<td><textarea class="form-control" rows="5" name="content" required="required"></textarea></td>
 						</tr>
 						<tr>
 							<th>비밀번호</th>

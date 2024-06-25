@@ -46,4 +46,25 @@ insert into visit_practice values(seq_visit_idx_practice.nextVal,
 
 select * from visit_practice order by idx desc;
 
+-- view 생성
+
+create or replace view visit_practice_view
+as
+select rownum as no, v.*
+from (select * from visit_practice order by idx desc) v;
+
+select * from visit_practice_view
+
+
+-- 수정
+
+update visit_practice set name = '일길동',
+			     content = '내가 일등이다',
+			     pwd = '1234',
+			     ip = '192.168.0.107',
+			     regdate = sysdate
+where idx = 2;
+
+
+
 commit
