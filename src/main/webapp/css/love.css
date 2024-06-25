@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 	.box {
-		width: 1200px;
+		width: 1230px;
 		height: 600px;
 		margin: auto;
 	}
@@ -15,24 +15,27 @@
 		width: 500px;
 		height: 500px;
 		float: left;
+		border: 0.5px solid #e2e2e2;
+		display: flex;
+   		justify-content: center; /* 자식 요소를 가로(수평) 기준으로 가운데 정렬시킴 */
+    	align-items: center; /* 자식 요소를 세로(수직) 기준으로 가운데 정렬시킴 */
 	}
+	
 	
 	.image img {
 		width: 100%;
-		object-fit: cover;
+ 		object-fit: cover;
+ 		align-items: center;
 	}
+	
 	
 	.write-box {
 		box-sizing: border-box;
 		width: 700px;
 		background: black;
 		height: 500px;
-		float: left;
+		float: right;
 	}
-	
-/*  	.write-box img {
-		height: 500px;
-	} */
 	
 	.small-image-box {
 		box-sizing: border-box;
@@ -46,6 +49,14 @@
 	.small-image img {
 		width: 50px;
 		padding: 5px;
+	}
+	
+	#game1, #game2, #game3, #game4, #game5 {
+		opacity: 0.5;
+	}
+	
+	#game1:hover, #game2:hover, #game3:hover, #game4:hover, #game5:hover {
+		opacity: 1;
 	}
 	
 	.tap {

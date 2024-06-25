@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/love.css">
+<script type="text/javascript">
+
+function imgChange(img) {
+	document.getElementById('a1').src = img.src;
+}
+
+</script>
 </head>
 <body>
 	<div class="header">
@@ -14,33 +21,33 @@
 	
 			<div class="image-box">
 				<div class="image">
-					<img alt="" src="image/gamefull.png">
+					<img alt="" src="image/gamefull.png" id="a1">
 				</div>
 			</div>
 			
 		
 		<div class="write-box">
 			<div>
-				<img alt="" src="image/list.png">
+				<img alt="" src="image/list2.png">
 			</div>
 		</div>
 		
 		<div class="small-image-box">
 				<div></div>
 				<div class="small-image">
-					<img src="image/gamefull.png">
+					<img id="game1" src="image/gamefull.png" onmouseover="imgChange(this)">
 				</div>
 				<div class="small-image">
-					<img src="image/gamefull2.png">
+					<img id="game2" src="image/play1.png" onmouseover="imgChange(this)">
 				</div>
 				<div class="small-image">
-					<img src="image/gamefull3.png">
+					<img id="game3" src="image/play2.jpg" onmouseover="imgChange(this)">
 				</div>
 				<div class="small-image">
-					<img src="image/gamefull4.png">
+					<img id="game4" src="image/play3.png" onmouseover="imgChange(this)">
 				</div>
 				<div class="small-image">
-					<img src="image/gamefull5.png">
+					<img id="game5" src="image/play4.jpg" onmouseover="imgChange(this)">
 				</div>
 				<div></div>
 			</div>
