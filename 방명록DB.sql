@@ -57,6 +57,8 @@ insert into visit values(seq_visit_idx.nextVal,
 						
 -- JDBC용 insert문
 
+select * from visit
+
 insert into visit values(seq_visit_idx.nextVal,?,?,?,?,sysdate);
 
 -- view로 생성
@@ -81,3 +83,5 @@ where idx = 26;
 -- idx 내림차순 (최신글 맨 꼭대기에 올리겠다)
 
 select * from visit order by idx desc;
+
+commit

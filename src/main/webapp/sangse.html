@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+/* 선일 서브페이지 작업 start */
+
+.box {
+	width: 1200px;
+	height: 3000px;
+	margin: auto;
+}
+.sub-main-img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; /* 이미지 원본 크기 */
+    
+    transition: transform 0.2s linear;
+}
+.img-wrapper {
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+}
+.sub-main-img {
+    margin: 50px;
+    overflow: hidden; /* 자기보다 커지면 숨겨주기 */
+    width: 500px;
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+.sub-main-img img:hover {
+    transform: scale(1.05);
+}
+/* 메인이미지 연달아 숨겨놓기 */
+
+.img-wrapper-sub2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+/* 작은이미지 hover시 각각의 이미지 띄우기 */
+
+.sub-main-bottom-img2 img:hover .img-wrapper-sub2{
+	display: block;
+}
+
+.mola {
+	position: relative;
+	
+}
+
+/* 작은이미지 작업 */
+
+.sub-main-bottom-img {
+	display: grid;
+	grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 3fr;
+	position: absolute;
+	bottom: -80px;
+	left: 50px;
+	
+	text-align: center;
+	width: 500px;
+}
+
+.sub-main-bottom-img img {
+	width: 45px;
+	padding: 10px;
+}
+
+.box2 {
+	width: 700px;
+	background: black;
+	height: 500px;
+	float: left;
+}
+
+
+/* 선일 서브페이지 작업 end */
+</style>
+
+</head>
+<body>
+<div class="box">
+	<div class="mola">
+		<div class="sub-main-img">
+			<div class="img-wrapper">
+				<img src="image/gamefull.png" class="img-wrapper-sub"/>
+				<!-- <img src="image/gamefull2.png" class="img-wrapper-sub2"/> -->
+<!-- 				<img src="image/gamefull3.png" class="img-wrapper-sub sub3"/>
+				<img src="image/gamefull4.png" class="img-wrapper-sub sub4"/>
+				<img src="image/gamefull5.png" class="img-wrapper-sub sub5"/> -->
+			</div>
+		<div class="box2">	
+			여긴 내공간	
+		</div>
+		</div>
+		
+		
+		
+		
+	<div class="sub-main-bottom-img">
+		<div></div>
+		<div class="sub-main-bottom-img1">
+				<img src="image/gamefull.png">
+		</div>
+		<div class="sub-main-bottom-img2">
+				<img src="image/gamefull2.png" class="image2">
+		</div>
+		<div class="sub-main-bottom-img3">
+				<img src="image/gamefull3.png">
+		</div>
+		<div class="sub-main-bottom-img4">
+				<img src="image/gamefull4.png">
+		</div>
+		<div class="sub-main-bottom-img5">
+				<img src="image/gamefull5.png">
+		</div>
+		<div></div>
+	</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+.sub-main-bottom-img img {
+	width: 30px;
+}
+
+.a-1 img {
+	width: 500px;
+}
+
+.a-1 {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.a1-b {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+.image_ex li {
+	float: left;
+	text-decoration: none;
+	list-style-type: none;
+	padding: 50px;
+}
+
+li img {
+	height: 50px;
+	width: 50px;
+}
+</style>
+
+<script type="text/javascript">
+	const click = document.getElementById("b-2");
+	const image = document.getElementById("a1-a");
+	
+	function mouseover() {
+		image.setAttribute("src","image/gamefull2.png");
+	}
+	function mouseleave() {
+		image.setAttribute("src","image/gamefull1.png");
+	}
+</script>
+</head>
+<body>
+	<div class="a-1">
+	    <img src="image/gamefull.png" alt="" id="a1-a">
+	</div>
+	
+	
+	<ul class="image_ex">
+		<li>
+			<img alt="" src="image/gamefull.png" id="b-1">
+		</li>
+		<li>
+			<div>
+			<img alt="" src="image/gamefull2.png" id="b-2" onmouseover="mouseover()" onmouseleave="mouseleave()">
+			</div>
+		</li>
+		<li>
+			<img alt="" src="image/gamefull3.png" id="b-3">
+		</li>
+		<li>
+			<img alt="" src="image/gamefull4.png" id="b-4">
+		</li>
+		<li>
+			<img alt="" src="image/gamefull5.png" id="b-5">
+		</li>
+	</ul>
+</body>
+</html>
