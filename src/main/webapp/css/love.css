@@ -5,7 +5,10 @@
 		height: 600px;
 		margin: auto;
 	}
-
+	
+	.header {
+		margin-bottom: 50px;
+	}
 	
 	.image-box {
 		box-sizing: border-box;
@@ -43,4 +46,14 @@
 	.small-image img {
 		width: 50px;
 		padding: 5px;
+	}
+	
+	.video {
+		margin-top: 300px;
+		text-align: center;
+	}
+	
+	.sangse {
+		margin-top: 50px;
+		text-align: center;
 	}
